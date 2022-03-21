@@ -1,5 +1,5 @@
 module economics
 
-greet() = print("Hello World!")
+include("main/functions.jl")
 
 end # module
