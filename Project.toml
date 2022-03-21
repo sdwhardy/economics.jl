@@ -1,0 +1,7 @@
+name = "economics"
+uuid = "f2f89240-573e-4a6e-a976-5b017e6a25f0"
+authors = ["sdwhardy <steve_dw_hardy@yahoo.ca>"]
+version = "0.1.0"
+
+[deps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
