@@ -42,18 +42,19 @@ end
 #**
 function cost_hvac_cable(cbl,ks)
     #cost of losses in the cable
-   # cbl.costs.rlc=cost_rlc(cbl,ks)
+    #cbl.costs.rlc=cost_rlc(cbl,ks)
     #cost and size of cable compensation placed on OSS - divide by 2 for each OSS or PCC
-    #cbl.costs.qc,cbl.reactors=cost_qc_hvac(cbl,ks)
+    #cbl.costs.qc,
+    cbl.reactors=cost_qc_hvac(cbl,ks)
     #cost of switchgear placed on OSS
-    #cbl.costs.sg=cost_sg_hvac(cbl)
+    cbl.costs.sg=cost_sg_hvac(cbl)
     #capex of cable
     cbl.costs.cpx_p,cbl.costs.cpx_i=capex_cable(cbl,ks.lac)
     #cost of corrective maintenance
     cbl.costs.cm=cost_cm(cbl.costs.cpx_p,ks.opx_c)
     #cost of expected energy not served
     ###################################
-    #cbl.costs.eens=cost_eens(cbl,ks)
+    cbl.costs.eens=cost_eens(cbl,ks)
     ###################################
     #totals the cable cost
     cbl.costs.ttl=cost_cbl_sum(cbl)
