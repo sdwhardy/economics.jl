@@ -10,7 +10,7 @@ function get_Cost_Data()
     return ks
 end
 
-#ABB XLPE Submarine Cable Systems Attachment to XLPE Land Cable Systems - User´s Guide Table:49
+#ABB XLPE Submarine Cable Systems Attachment to XLPE Land Cable Systems not subsea - User´s Guide Table:49
 #500: 0.14microF/km 0.43mH/km
 #630: 0.16microF/km 0.41mH/km
 #800: 0.17microF/km 0.40mH/km
