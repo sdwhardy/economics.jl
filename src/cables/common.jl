@@ -15,6 +15,18 @@ function cost_cm(cpx,k)
     return cm
 end
 
+#**
+function cost_rlc(r,mav_wfs,wind_profile,kV)
+    yearly_losses=0
+    for time_step in mav_wfs.*wind_profile
+        amps=time_step/(sqrt(3)*kV)*1000
+        time_step_losses=((amps)^2*r*get_Cost_Data().E_op)/1000000
+        yearly_losses=yearly_losses+time_step_losses
+    end
+    yearly_losses=yearly_losses*npv_years()
+    return yearly_losses/1000000
+end
+
 #sums all cable costs and returns the total**
 #**
 function cost_cbl_sum(cbl)
