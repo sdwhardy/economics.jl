@@ -12,8 +12,8 @@ mutable struct cost_ks
     Qc_oss::Float32
     Qc_pcc::Float32
     life::Float32
-    T_op::Float32
-    E_op::Float32
+    T_op::Float32#lifetime considered default sse at 25 years
+    E_op::Float32#Euro/MWh default set 100 Euro/MWh
     cf::Float32
     FC_bld::Float32
     p2e::Float32
