@@ -6,7 +6,7 @@ function optimal_ac_cable(cbl0,cbl_data,km,ks)
     cbl.length=km
     cbl.mva=min_mva=deepcopy(cbl0.mva)
     cbl0.costs.ttl=Inf
-    
+
     for cd in cbl_data
         num=1
         cap_at_km=get_newQ_Capacity(cbl0.elec.freq,km,cd[1],cd[4]*10^-9,cd[5])
@@ -42,7 +42,7 @@ end
 #**
 function cost_hvac_cable(cbl,ks)
     #cost of losses in the cable
-   # cbl.costs.rlc=cost_rlc(cbl,ks)
+    #cbl.costs.rlc=cost_rlc(cbl,ks)
     #cost and size of cable compensation placed on OSS - divide by 2 for each OSS or PCC
     #cbl.costs.qc,cbl.reactors=cost_qc_hvac(cbl,ks)
     #cost of switchgear placed on OSS
